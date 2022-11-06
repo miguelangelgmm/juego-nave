@@ -1,0 +1,175 @@
+/*Elimino margen y padding del body*/
+body{
+    padding: 0;
+    margin: 0;
+}
+.contenedor{
+    /*Color de fondo*/
+    background-color: #101f59;
+    /*Posicion absoluta para que pueda actuar de fondo*/
+    position: absolute;
+    /*empieza en la esquina*/
+    top: 0;
+    left: 0;
+    /*dimensiones*/
+    width: 100vw;
+    height: 100vh;
+    /* Cuando se desborde el contenido se recorta evitando que salga la barra de desplazamiento*/
+    overflow: hidden;
+}
+
+.cuadrados{
+    /*Les damos una posición absoluta*/
+    position: absolute;
+    /*Empieza en 0,0*/
+    top: 0px;
+    left: 0px;
+    /*Saldran cuadrados por todo el ancho de la pantalla y llegaran al final*/
+    width: 100%;
+    height: 100%;
+    /*Establecemos el indice del eje z como 1 para que sea visible*/
+    z-index: 1;
+}
+
+/*Esta lista hace elemento a los cuadrados, son estilos genericos que se aplicaran a todos*/
+li{
+    /*Posición, estilo de listas y display*/
+    position: absolute;
+    list-style: none;
+    display: block;
+    /*borde y dimensiones genéricas*/
+    border-radius: 10%;
+    width: 40px;
+    height: 40px;
+    /*Color por defecto*/
+    background-color: #000b38;
+    /*Su posición incial sera inferior a 0 para hacer el efecto de aparecer */
+    bottom: -160px;
+    /*Generamos una animación que va a durar de forma genérica 25 segundos y se repetira de forma infinita*/
+    animation: animacionCuadrados 25s infinite;
+    /*La velocidad de la animación sera lineal-constante*/
+    transition-timing-function:linear;
+}
+/*Animación, va a pasar de 0 px en y y una opacidad de 0 hasta una opacidad de 1 y un desplazamiento de -1200 y le añadimos un efecto de rotación*/
+@keyframes animacionCuadrados{
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-1200px) rotate(600deg);
+        opacity: 1;
+    }
+}
+/*Efectos para los cuadrados de forma individual*/
+/* 
+left: distintas posiciones 
+width y height distintos tamaños 
+animation-delay: inicia la animación con un retraso
+animation-duration: cambiamos la duración de la animación
+background-color: cambiamos el color de los cuadrados
+*/
+li:nth-child(1){
+    left: 10%;
+}
+li:nth-child(2){
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 2s;
+    animation-duration: 17s ;
+}
+li:nth-child(3){
+    left: 25%;
+    animation-delay: 4s;
+}
+li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 22s;
+    background-color: #3249a3;
+}
+li:nth-child(5){
+    left: 70%;
+}
+li:nth-child(6){
+    animation-delay: 3s;
+    left: 90%;
+}
+li:nth-child(7){
+    left: 60%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 25s;
+    animation-delay: 6s;
+    background-color: #0cf574;
+}
+li:nth-child(8){
+    left: 60%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 23s;
+    animation-delay: 8s;
+    background-color: #0cf574;
+}
+li:nth-child(9){
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 30s;
+    background-color: #0cf574;
+}
+li:nth-child(10){
+    left: 5%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 22;
+    background-color: #2b67ac;
+}
+li:nth-child(11){
+    left: 85%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 22;
+    background-color: #0cf574;
+}
+li:nth-child(12){
+    left: 95%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 20;
+    background-color: #0cf574;
+    animation-delay: 6s;
+}
+
+li:nth-child(13){
+    left: 75%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 19;
+    background-color: #0cf574;
+}
+li:nth-child(13){
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 20;
+    background-color: #0cf574;
+}
+li:nth-child(14){
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 22;
+    background-color: #3178bb;
+    animation-delay: 5s;
+}
+li:nth-child(15){
+    left: 40%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 22;
+    background-color: #3178bb;
+    animation-delay: 5s;
+}
