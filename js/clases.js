@@ -222,7 +222,7 @@ export class Jugador {
         //dibujamos los elementos en la esquina superior
         this.dibujar = function () {
             this.setFiguraVidas();
-            contexto.drawImage(this.figuraVidas, 10, 10, 120, 40);
+            contexto.drawImage(this.figuraVidas, 10, 10, 160, 40);
 
             contexto.font = "italic 20px Arial";
             contexto.fillStyle = "RGBA(255, 255, 252)";

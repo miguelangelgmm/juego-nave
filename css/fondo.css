@@ -49,6 +49,9 @@ li{
     animation: animacionCuadrados 25s infinite;
     /*La velocidad de la animación sera lineal-constante*/
     transition-timing-function:linear;
+    /*Creo una sombra para generar efecto 3d*/
+    box-shadow: 0 0 10px #1CB5E0,0 0 40px
+
 }
 /*Animación, va a pasar de 0 px en y y una opacidad de 0 hasta una opacidad de 1 y un desplazamiento de -1200 y le añadimos un efecto de rotación*/
 @keyframes animacionCuadrados{
