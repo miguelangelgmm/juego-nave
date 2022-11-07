@@ -119,7 +119,7 @@ export class Nave {
             this.posx > 0 ? (this.posx -= 15) : (this.posx -= 0);
             jugador.escudo
                 ? (this.figura.src =
-                        DIR_IMG + imgNave + "/viperIzquierdaEscudo.png")
+                      DIR_IMG + imgNave + "/viperIzquierdaEscudo.png")
                 : (this.figura.src = DIR_IMG + imgNave + "/viperIzquierda.png");
         };
 
@@ -127,7 +127,7 @@ export class Nave {
             this.posx < LARGO - 60 ? (this.posx += 15) : (this.posx += 0);
             jugador.escudo
                 ? (this.figura.src =
-                        DIR_IMG + imgNave + "/viperDerechaEscudo.png")
+                      DIR_IMG + imgNave + "/viperDerechaEscudo.png")
                 : (this.figura.src = DIR_IMG + imgNave + "/viperDerecha.png");
         };
         this.centrar = function () {
@@ -536,7 +536,7 @@ export class CorazonDorado extends Corazon {
             this.frame > 100 ? (this.frame = 10) : this.frame++;
             this.figura.src =
                 DIR_IMG +
-                `CorazonOro/Corazon${Math.trunc(this.frame / 10)}.png`;
+                `CorazonOro/corazon${Math.trunc(this.frame / 10)}.png`;
 
             contexto.drawImage(this.figura, x, y, 60, 60);
         };
