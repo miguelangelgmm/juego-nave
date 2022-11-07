@@ -24,6 +24,6 @@ empezar.addEventListener("click", () => {
     if (elegido) {
         window.location.href = "juego.html";
     } else {
-        window.location.href = "juego.html?nave1=2";
+        window.location.href = "juego.html?nave1=azul";
     }
 });

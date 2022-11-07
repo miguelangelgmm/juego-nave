@@ -5,7 +5,7 @@ const POSX_INICIAL = Math.round(LARGO / 2) - 15;
 const POSY_INICIAL = ALTO - 65;
 
 //imagen nave elegida
-const imgNave = window.location.href.includes("nave1") ? "Nave2" : "Nave1";
+const imgNave = window.location.href.includes("azul") ? "Nave2" : "Nave1";
 
 /**
  * Maneja los eventos relacionados con la nave
@@ -358,7 +358,7 @@ export class Corazon {
         this.incremento = 2;
         //imagen
         this.figura = new Image();
-        this.figura.src = DIR_IMG + "/Corazon/corazon1.png";
+        this.figura.src = DIR_IMG + "Corazon/corazon1.png";
         //indica el frame de la imagen Disponemos de 10 frames de 1 a 10
         this.frame = 10;
         //dibujo
@@ -371,7 +371,7 @@ export class Corazon {
             }
             this.frame > 100 ? (this.frame = 10) : this.frame++;
             this.figura.src =
-                DIR_IMG + `/Corazon/corazon${Math.trunc(this.frame / 10)}.png`;
+                DIR_IMG + `Corazon/corazon${Math.trunc(this.frame / 10)}.png`;
 
             contexto.drawImage(this.figura, x, y, 60, 60);
         };
@@ -414,16 +414,16 @@ export class Enemigo {
         this.incremento = 5;
         //imagen
         this.figura = new Image();
-        this.figura.src = DIR_IMG + "/Enemigo/viper.png";
+        this.figura.src = DIR_IMG + "Enemigo/viper.png";
 
         //dibujo
         this.dibujar = function () {
             let figura = this.getFigura();
             if (this.vidas == 2) {
-                this.figura.src = DIR_IMG + "/Enemigo/viper2.png";
+                this.figura.src = DIR_IMG + "Enemigo/viper2.png";
             }
             if (this.vidas == 1) {
-                this.figura.src = DIR_IMG + "/Enemigo/viper3.png";
+                this.figura.src = DIR_IMG + "Enemigo/viper3.png";
             }
             this.setY();
             this.moverDerecha();
