@@ -524,7 +524,7 @@ export class CorazonDorado extends Corazon {
         //posicion aleatoria
         this.posx = posX;
         this.posy = 50;
-        this.figura.src = DIR_IMG + "CorazonOro/corazon1.png";
+        this.figura.src = DIR_IMG + "dorado/corazon1.png";
         //dibujo
         this.dibujar = function () {
             let x = this.getX();
@@ -536,7 +536,7 @@ export class CorazonDorado extends Corazon {
             this.frame > 100 ? (this.frame = 10) : this.frame++;
             this.figura.src =
                 DIR_IMG +
-                `CorazonOro/corazon${Math.trunc(this.frame / 10)}.png`;
+                `dorado/corazon${Math.trunc(this.frame / 10)}.png`;
 
             contexto.drawImage(this.figura, x, y, 60, 60);
         };
