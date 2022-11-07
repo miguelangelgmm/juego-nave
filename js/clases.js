@@ -5,7 +5,7 @@ const POSX_INICIAL = Math.round(LARGO / 2) - 15;
 const POSY_INICIAL = ALTO - 65;
 
 //imagen nave elegida
-const imgNave = window.location.href.includes("nave") ? "Nave2" : "Nave1";
+const imgNave = window.location.href.includes("nave1") ? "Nave2" : "Nave1";
 
 /**
  * Maneja los eventos relacionados con la nave
