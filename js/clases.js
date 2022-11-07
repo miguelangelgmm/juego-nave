@@ -287,7 +287,7 @@ export class Arma {
         this.frame = 1;
         //imagen
         this.disparo = new Image();
-        this.disparo.src = DIR_IMG + `/Disparo/disparoSimple${this.frame}.png`;
+        this.disparo.src = DIR_IMG + `Disparo/disparoSimple${this.frame}.png`;
         //las posiciones del disparo son las de la nave pero un pelin más bajo
         this.posX = Nave.getX();
         this.posY = Nave.getY() - 20;
@@ -295,7 +295,7 @@ export class Arma {
         this.dibujar = function () {
             this.frame >= 8 ? (this.frame = 1) : this.frame++;
             this.disparo.src =
-                DIR_IMG + `/Disparo/disparoSimple${this.frame}.png`;
+                DIR_IMG + `Disparo/disparoSimple${this.frame}.png`;
             contexto.drawImage(this.disparo, this.posX, this.posY, 60, 20);
         };
 
@@ -487,7 +487,7 @@ export class ArmaEnemigo {
         //imagen
         this.disparo = new Image();
         this.disparo.src =
-            DIR_IMG + `/DisparoEnemigo/disparoSimple${this.frame}.png`;
+            DIR_IMG + `DisparoEnemigo/disparoSimple${this.frame}.png`;
         //las posiciones del disparo son las de la nave pero un pelin más bajo
         this.posX = nave.getX();
         this.posY = nave.getY() + 20;
@@ -495,7 +495,7 @@ export class ArmaEnemigo {
         this.dibujar = function () {
             this.frame >= 8 ? (this.frame = 1) : this.frame++;
             this.disparo.src =
-                DIR_IMG + `/DisparoEnemigo/disparoSimple${this.frame}.png`;
+                DIR_IMG + `DisparoEnemigo/disparoSimple${this.frame}.png`;
             contexto.drawImage(this.disparo, this.posX, this.posY, 60, 20);
         };
 
